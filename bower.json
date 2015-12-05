@@ -1,0 +1,22 @@
+{
+  "name": "angular-study",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jinhyun Park <jjeonginpark@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jjeonginpark/angular-study",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "bootstrap": "~3.3.6"
+  }
+}
