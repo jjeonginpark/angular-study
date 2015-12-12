@@ -10,7 +10,7 @@ angular.module('product')
 		selectedCategory = newCategory;
 	};
 
-	$scope.categoyFilterFn = function (product) {
-		return selectedCategory == null || product.catogory == selectedCategory;
+	$scope.categoryFilterFn = function (product) {
+		return selectedCategory == null || product.category == selectedCategory;
 	};
 });

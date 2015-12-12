@@ -8,7 +8,28 @@ angular.module('customFilter' , [])
 			var results = [];
 			var keys = {};
 			for (var i = 0; i < data.length; i++) {
-				var val  = data[i][prop]; //dta[i]['category'];
+				var val  = data[i][prop]; //data[i]['category'];
+				
+				if(angular.isUndefined(keys[val])){
+					keys[val] = true;
+					results.push(val);
+				}
+			}
+			return results;
+		} else {
+			return data;
+		}
+	}
+});
+
+angular.module('customFilter2' , [])
+.filter('unique2' , function (){
+	return function (data , prop) {
+		if(angular.isArray(data) && angular.isString(prop)){
+			var results = [];
+			var keys = {};
+			for (var i = 0; i < data.length; i++) {
+				var val  = data[i][prop]; //data[i]['category'];
 				
 				if(angular.isUndefined(keys[val])){
 					keys[val] = true;
