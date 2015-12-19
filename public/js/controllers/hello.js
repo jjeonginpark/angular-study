@@ -33,14 +33,14 @@ angular.module('hello',[])//[]배열이 있으면 새로운거 생성하는것
 	$scope.remove = function (index) {
 		$scope.items.splice(index, 1);
 	}
-	// $scope.totalSum = function () {
-	// 	var total = 0;
-	// 	for (var i = 0; i < items.length; i++) {
-	// 		var thisSum = items[i].price * items[i].count;
-	// 		thisSum = total;
-	// 	};
-	// 	return total;
-	// }
+	$scope.totalSum = function () {
+		var total = 0;
+		for (var i = 0; i < $scope.items.length; i++) {
+			var thisSum = $scope.items[i].price * $scope.items[i].count;
+			total += thisSum;
+		};
+		return total;
+	}
 });
 
 
